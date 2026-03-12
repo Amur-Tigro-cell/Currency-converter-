@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: currency-converter
+    runtime: static
+    buildCommand: npm ci; npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_CURRENCY_API_KEY
+        sync: false

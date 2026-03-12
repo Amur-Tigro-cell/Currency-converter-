@@ -102,6 +102,30 @@ The application uses the [currencyapi.com API](https://currencyapi.com/docs):
    GET /latest?apikey=YOUR_KEY&base_currency=USD&currencies=EUR
    ```
 
+## Deploy on Render
+
+This project includes a `render.yaml` blueprint for static deployment.
+
+### Option 1: Blueprint Deploy (Recommended)
+
+1. Push this repo to GitHub
+2. In Render, click **New +** -> **Blueprint**
+3. Select this repository
+4. Set environment variable:
+   - `VITE_CURRENCY_API_KEY` = your real key from currencyapi.com
+5. Deploy
+
+### Option 2: Manual Static Site Setup
+
+If you prefer manual setup in Render:
+
+- **Service Type**: Static Site
+- **Build Command**: `npm ci && npm run build`
+- **Publish Directory**: `dist`
+- **Environment Variable**: `VITE_CURRENCY_API_KEY=your_real_key`
+
+After deployment, Render will provide a public URL for your converter.
+
 ## Troubleshooting
 
 ### "Failed to fetch currencies"
