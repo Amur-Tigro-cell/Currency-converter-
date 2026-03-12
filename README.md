@@ -102,6 +102,26 @@ The application uses the [currencyapi.com API](https://currencyapi.com/docs):
    GET /latest?apikey=YOUR_KEY&base_currency=USD&currencies=EUR
    ```
 
+## Deploy on Netlify
+
+This repo now includes a `netlify.toml` file, so Netlify can pick build settings automatically.
+
+### Quick Deploy Steps
+
+1. Go to [Netlify](https://app.netlify.com/)
+2. Click **Add new site** -> **Import an existing project**
+3. Connect GitHub and select this repository
+4. Netlify will auto-detect build settings from `netlify.toml`
+5. Add environment variable in Netlify:
+   - `VITE_CURRENCY_API_KEY` = your real currencyapi.com key
+6. Click **Deploy site**
+
+### If You Set Values Manually
+
+- **Build command**: `npm ci && npm run build`
+- **Publish directory**: `dist`
+- **Environment variable**: `VITE_CURRENCY_API_KEY=your_real_key`
+
 ## Deploy on Render
 
 This project includes a `render.yaml` blueprint for static deployment.
