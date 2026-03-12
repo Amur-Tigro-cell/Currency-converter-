@@ -29,6 +29,10 @@ body {
 #root {
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
 input,
@@ -46,14 +50,6 @@ button {
   :root {
     color: #213547;
     background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
   }
   a:hover {
     color: #747bff;
